@@ -30,3 +30,9 @@ for (let i = 0; i < model.length; i++)
 //    and this is for when we click any were on screen to cancel 
     blur.addEventListener("click", closemodel);
 
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && !blur.classList.contains("hidden")){
+        closemodel();
+      }
+    })
+
